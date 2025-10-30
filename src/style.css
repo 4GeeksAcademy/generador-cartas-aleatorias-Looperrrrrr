@@ -1,5 +1,49 @@
 @import "bootstrap/dist/css/bootstrap.min.css";
 
 body{
-    background: white;
+    background: #016801;
+    box-sizing: border-box;
 }
+
+.card {
+    
+    font-size: 70px;
+    text-align: center;
+    margin: auto;
+    margin-top: 50px;
+    width: 300px;
+    height: 450px;
+    padding-top: 151px;
+    border-radius: 10px;
+    border: 1px solid black;
+    position: relative;
+    &:before{
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 70px;
+    };
+    &:after {
+        position: absolute;
+        bottom: 20px;
+        right: 20px;
+        font-size: 70px;
+    };
+
+    &.spade:before, &.spade:after {
+        content: "\2660";
+    }
+    &.heart:before, &.heart:after {
+        content: "\2665";
+        color: red;
+    }
+    &.diamond:before, &.diamond:after {
+        content: "\2666";
+        color: red;
+    }
+    &.club:before, &.club:after {
+        content: "\2663";
+    }
+
+}
+
